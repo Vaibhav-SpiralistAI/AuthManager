@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		556A67AA2D5B885000DE7EBB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 556A67A92D5B885000DE7EBB /* FirebaseAuth */; };
+		556A67AC2D5B885000DE7EBB /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 556A67AB2D5B885000DE7EBB /* FirebaseCore */; };
+		556A67AE2D5B885000DE7EBB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 556A67AD2D5B885000DE7EBB /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		556A67982D5B878400DE7EBB /* AuthFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AuthFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		556A67A62D5B879600DE7EBB /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +43,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				556A67AC2D5B885000DE7EBB /* FirebaseCore in Frameworks */,
+				556A67AA2D5B885000DE7EBB /* FirebaseAuth in Frameworks */,
+				556A67AE2D5B885000DE7EBB /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				556A679A2D5B878400DE7EBB /* AuthFramework */,
+				556A67A52D5B879600DE7EBB /* Frameworks */,
 				556A67992D5B878400DE7EBB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +67,14 @@
 				556A67982D5B878400DE7EBB /* AuthFramework.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		556A67A52D5B879600DE7EBB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				556A67A62D5B879600DE7EBB /* Accelerate.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +108,9 @@
 			);
 			name = AuthFramework;
 			packageProductDependencies = (
+				556A67A92D5B885000DE7EBB /* FirebaseAuth */,
+				556A67AB2D5B885000DE7EBB /* FirebaseCore */,
+				556A67AD2D5B885000DE7EBB /* FirebaseFirestore */,
 			);
 			productName = AuthFramework;
 			productReference = 556A67982D5B878400DE7EBB /* AuthFramework.framework */;
@@ -117,6 +139,9 @@
 			);
 			mainGroup = 556A678E2D5B878400DE7EBB;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				556A67A82D5B885000DE7EBB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 556A67992D5B878400DE7EBB /* Products */;
 			projectDirPath = "";
@@ -152,6 +177,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -163,6 +189,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -185,6 +212,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -196,6 +224,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,6 +390,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		556A67A82D5B885000DE7EBB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		556A67A92D5B885000DE7EBB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 556A67A82D5B885000DE7EBB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		556A67AB2D5B885000DE7EBB /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 556A67A82D5B885000DE7EBB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		556A67AD2D5B885000DE7EBB /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 556A67A82D5B885000DE7EBB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 556A678F2D5B878400DE7EBB /* Project object */;
 }

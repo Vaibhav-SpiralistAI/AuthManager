@@ -1,0 +1,17 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-module-flags: -target arm64-apple-ios17.6 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name AuthFramework
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+@_exported import AuthFramework
+import FirebaseAuth
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_hasMissingDesignatedInitializers public class AuthManager {
+  public static func signIn(email: Swift.String, password: Swift.String, completion: @escaping (Swift.Result<FirebaseAuth.User, any Swift.Error>) -> Swift.Void)
+  public static func signUp(email: Swift.String, password: Swift.String, completion: @escaping (Swift.Result<FirebaseAuth.User, any Swift.Error>) -> Swift.Void)
+  public static func signOut(completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  @objc deinit
+}
